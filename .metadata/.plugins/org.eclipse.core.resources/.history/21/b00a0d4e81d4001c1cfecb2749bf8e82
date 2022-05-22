@@ -1,0 +1,58 @@
+package pojoClass;
+import java.io.*;
+import java.util.*;
+public class PojoDemoClass {
+
+	public static void main(String[] args) {
+		Employee emp=new Employee();
+		emp.setName("Subha");
+		emp.setRollNo(234565437l);
+		emp.setAddress("56, North Street");
+		emp.setAge(34);
+		emp.setDesignation("Developer");
+		emp.setEmail("abc@gmail.com");
+		emp.setPhoneNo("8456723145");
+
+		Employee emp2=new Employee();
+		emp2.setName("Subha123");
+		emp2.setRollNo(774565437l);
+		emp2.setAddress("56, North Street");
+		emp2.setAge(32);
+		emp2.setDesignation("Developer");
+		emp2.setEmail("der@gmail.com");
+		emp2.setPhoneNo("9456723145");
+
+		
+	/*	System.out.println("Name :"+ emp.getName());
+		System.out.println("Age :"+ emp.getAge());
+		System.out.println("RollNo :"+ emp.getRollNo());
+		System.out.println("Address :"+ emp.getAddress());
+		System.out.println("Designation :"+ emp.getDesignation());
+		System.out.println("Email :"+ emp.getEmail());
+		System.out.println("PhoneNumber :"+ emp.getPhoneNo());*/
+		//System.out.println(emp.getAddress());
+		
+		
+ArrayList<Employee> EmpList=new ArrayList<Employee>();
+EmpList.add(emp);
+EmpList.add(emp2);
+System.out.println(emp.toString());
+System.out.println(emp2.toString());
+
+/*for(Employee i:EmpList)
+{
+	System.out.println(i.Age);
+System.out.println(i.Name);
+System.out.println(i.RollNo);
+System.out.println(i.Email);
+System.out.println(i.Address);
+System.out.println(i.PhoneNo);
+}*/
+for(Employee i:EmpList)
+	if(i.getName()=="Subha")
+	System.out.println(i.toString());
+
+	
+	}
+
+}

@@ -1,0 +1,128 @@
+package assignmentOnCollections;
+import java.io.*;
+import java.util.*;
+
+public class StudentDetails {
+
+	public static void main(String[] args) {
+		int rollNo;
+		String studentName;
+		char std;
+		int tamilMark;
+		int englishMark;
+		int mathsMark;
+		int scienceMark;
+		int socialMark;
+		int totalMark;
+	//	char grade;
+		int count;
+		ArrayList<StudentPojoArray> studentList=new ArrayList<StudentPojoArray>();
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter number of students you want to give details ");
+		count=input.nextInt();
+
+		while(count>0)
+		{
+StudentPojoArray student=new StudentPojoArray();
+System.out.println("Enter roll number ");
+rollNo=input.nextInt();
+input.nextLine();
+System.out.println("Enter your name ");
+studentName=input.nextLine();
+System.out.println("Enter your class ");
+std=input.next().charAt(0);
+System.out.println("Enter tamil mark ");
+tamilMark=input.nextInt();
+System.out.println("Enter english mark ");
+englishMark=input.nextInt();
+System.out.println("Enter maths mark ");
+mathsMark=input.nextInt();
+System.out.println("Enter science mark ");
+scienceMark=input.nextInt();
+System.out.println("Enter social mark ");
+socialMark=input.nextInt();
+totalMark=tamilMark+englishMark+mathsMark+scienceMark+socialMark;
+student.setRollNo(rollNo);
+student.setStudentName(studentName);
+student.setStd(std);
+student.setTamilMark(tamilMark);
+student.setEnglishMark(englishMark);
+student.setMathsMark(mathsMark);
+student.setScienceMark(scienceMark);
+student.setSocialMark(socialMark);
+student.setTotalMark(totalMark);
+
+
+studentList.add(student);
+count--;
+		}
+System.out.println("The student details are ");
+
+
+for(StudentPojoArray i:studentList)
+{
+System.out.println("Student Roll number: " + i.getRollNo() + "\nName :" + i.getStudentName() + "\nClass :" + i.getStd() + "\nTamil Mark :" + i.getTamilMark() + "\nEnglish Mark :" + i.getEnglishMark() +"\nMaths Mark :"+i.getMathsMark()+ "\nScience Mark :"+i.getScienceMark()+"\nSocial Mark :"+i.getSocialMark()+"\nTotal Marks :" + i.getTotalMark());
+}
+//boolean isTrue=false;
+
+
+char choice;
+System.out.println("Do you want to append a student detail in first position ---press 'Y' or 'N' ");
+choice=input.next().charAt(0);
+if(choice=='Y')
+{
+System.out.println("Enter the student details to append it in 1st position ");
+
+StudentPojoArray student=new StudentPojoArray();
+System.out.println("Enter roll number ");
+rollNo=input.nextInt();
+input.nextLine();
+System.out.println("Enter your name ");
+studentName=input.nextLine();
+System.out.println("Enter your class ");
+std=input.next().charAt(0);
+System.out.println("Enter tamil mark ");
+tamilMark=input.nextInt();
+System.out.println("Enter english mark ");
+englishMark=input.nextInt();
+System.out.println("Enter maths mark ");
+mathsMark=input.nextInt();
+System.out.println("Enter science mark ");
+scienceMark=input.nextInt();
+System.out.println("Enter social mark ");
+socialMark=input.nextInt();
+totalMark=tamilMark+englishMark+mathsMark+scienceMark+socialMark;
+student.setRollNo(rollNo);
+student.setStudentName(studentName);
+student.setStd(std);
+student.setTamilMark(tamilMark);
+student.setEnglishMark(englishMark);
+student.setMathsMark(mathsMark);
+student.setScienceMark(scienceMark);
+student.setSocialMark(socialMark);
+student.setTotalMark(totalMark);
+studentList.add(0, student);
+System.out.println("Display details after append ");
+
+for(StudentPojoArray i:studentList)
+{
+System.out.println("Student Roll number: " + i.getRollNo() + "\nName :" + i.getStudentName() + "\nClass :" + i.getStd() + "\nTamil Mark :" + i.getTamilMark() + "\nEnglish Mark :" + i.getEnglishMark() +"\nMaths Mark :"+i.getMathsMark()+ "\nScience Mark :"+i.getScienceMark()+"\nSocial Mark :"+i.getSocialMark()+"\nTotal Marks :" + i.getTotalMark());
+}
+}
+else
+	System.out.println("End of execution");
+
+System.out.println("Enter the index position you want to reteive details ");
+int indexRetrive=input.nextInt();
+for(StudentPojoArray i:studentList)
+{
+	if(indexRetrive==studentList.indexOf(i))
+System.out.println("Student Roll number: " + i.getRollNo() + "\nName :" + i.getStudentName() + "\nClass :" + i.getStd() + "\nTamil Mark :" + i.getTamilMark() + "\nEnglish Mark :" + i.getEnglishMark() +"\nMaths Mark :"+i.getMathsMark()+ "\nScience Mark :"+i.getScienceMark()+"\nSocial Mark :"+i.getSocialMark()+"\nTotal Marks :" + i.getTotalMark());
+	break;
+}
+
+
+input.close();
+}
+
+}

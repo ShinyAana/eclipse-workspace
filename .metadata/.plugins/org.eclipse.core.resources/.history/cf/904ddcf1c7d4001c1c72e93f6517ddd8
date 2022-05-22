@@ -1,0 +1,40 @@
+package mentorSathishSan;
+import java.io.*;
+import java.util.*;
+public class TwoSumTarget {
+
+	public static void main(String[] args) {
+		Scanner input=new Scanner(System.in);
+		HashMap<Integer,Integer> resultIndices=new HashMap<Integer,Integer>();
+		ArrayList<Integer> inputList=new ArrayList<Integer>();
+		System.out.println("Enter size of an Array ");
+		int arraySize=input.nextInt();
+		for(int i=0;i<arraySize;i++)
+		{
+			int j=input.nextInt();
+			inputList.add(j);
+		}
+		Collections.sort(inputList);
+		int targetLimit=inputList.get(arraySize)+inputList.get(arraySize-1);
+		int count=4;
+		while(count>0)
+		{
+		System.out.println("Enter target value upto the "+ targetLimit +" limit ");
+		int targetValue=input.nextInt();
+		for(int index=0;index<inputList.size();index++)
+		{
+			//int firstIndex=inputList.get(index);
+			int difference=targetValue-inputList.get(index);
+			int secondIndex=inputList.indexOf(difference);
+			if(secondIndex!=-1 && secondIndex!=index)
+				resultIndices.put(index,secondIndex);
+				
+			
+		}
+		count--;
+		}
+		System.out.println("Resultant indices ");
+		System.out.println(resultIndices);
+	}
+
+}

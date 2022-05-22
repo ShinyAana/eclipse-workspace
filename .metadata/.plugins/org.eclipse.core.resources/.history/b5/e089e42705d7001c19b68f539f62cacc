@@ -1,0 +1,25 @@
+package linkedList;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedList;
+
+public class LinkedListDemo {
+
+	public static void main(String[] args) {
+		LinkedList<String> ll=new LinkedList<>();
+		ArrayList<String> al=new ArrayList<>();
+		al.add("asd");
+		al.add("wef");
+		al.add("ert");
+		ll.add("Priya");
+		ll.add("Subha");
+		ll.add("Aanyaa");
+		ll.add(1, "Selvarani");
+		System.out.println(ll);
+		ll.addAll(al);
+		System.out.println(ll);
+		
+	}
+
+}

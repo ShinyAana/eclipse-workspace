@@ -1,0 +1,5 @@
+package mentorSathishSan;
+
+public abstract class Food {
+
+}

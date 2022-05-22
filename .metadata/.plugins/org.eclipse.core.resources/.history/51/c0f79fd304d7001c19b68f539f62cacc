@@ -1,0 +1,16 @@
+package linkedList;
+
+import java.util.LinkedList;
+
+public class LinkedListDemo {
+
+	public static void main(String[] args) {
+		LinkedList<String> ll=new LinkedList<>();
+		ll.add("Priya");
+		ll.add("Subha");
+		ll.add("Aanyaa");
+		ll.add(1, "Selvarani");
+		System.out.println(ll);
+	}
+
+}
