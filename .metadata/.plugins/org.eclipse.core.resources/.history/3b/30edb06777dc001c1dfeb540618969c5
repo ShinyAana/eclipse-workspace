@@ -1,0 +1,31 @@
+package mentorSathishSan;
+
+import java.util.Scanner;
+
+class UserNameValidator
+{
+	public static final String regularExpression="^[[a-z]][\\d|[_]|[-]|[.]]{2,7}$";
+}
+public class EmailValidation {
+	public static final Scanner input=new Scanner(System.in);
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=Integer.parseInt(input.nextLine());
+		while(n--!=0)
+		{
+			String userName=input.nextLine();
+			if(userName.matches(UserNameValidator.regularExpression))
+			{
+				System.out.println("Valid mail address ");
+				
+			}
+			else
+				System.out.println("InValid mail address ");
+			
+		}
+		
+
+		
+	}
+
+}

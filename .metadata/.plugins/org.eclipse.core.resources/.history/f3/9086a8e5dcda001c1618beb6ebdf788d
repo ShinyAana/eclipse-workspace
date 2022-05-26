@@ -1,0 +1,10 @@
+package vector;
+
+public class RemoveDetails {
+
+	public void removeDetails() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

@@ -1,0 +1,21 @@
+package oops;
+interface In1
+{
+    final int a = 10;
+    default void display()
+    {
+        System.out.println("hello");
+    }
+}
+  
+public class InterfaceDemo implements In1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		InterfaceDemo obj=new InterfaceDemo();
+		obj.display();
+		System.out.println(a);
+	}
+
+}

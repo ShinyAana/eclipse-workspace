@@ -116,8 +116,8 @@ public class StudentDetailsHM {
 	private void setViewStudentDetails(HashMap<Integer, StudentPojoArray> studentHashmap)
 	{
 		// TODO Auto-generated method stub
-		Set s=studentHashmap.entrySet();
-		System.out.println(s);
+		//Set s=studentHashmap.entrySet();
+		//System.out.println(s);
 		
 		System.out.println("Student Details");
 		System.out.println(studentHashmap.keySet());
@@ -132,22 +132,21 @@ public class StudentDetailsHM {
 	private void separateKeyValue(HashMap<Integer, StudentPojoArray> studentHashmap) {
 		// TODO Auto-generated method stub
 		Scanner in=new Scanner(System.in);
-		Set s=studentHashmap.entrySet();
-		Iterator i=s.iterator();
+		Iterator i=studentHashmap.entrySet().iterator();
 		while(i.hasNext())
 		{
-			Map.Entry mapentry=(Map.Entry)i.next();
-			Object o1=mapentry.getKey();
-			Object o1Details=mapentry.getValue();
+			Map.Entry<Integer, StudentPojoArray> mapentry=(Map.Entry)i.next();
+			Integer o1=mapentry.getKey();
+			StudentPojoArray o1Details=mapentry.getValue();
 			System.out.println(mapentry.getKey());
 			System.out.println(mapentry.getValue());
 			
 			System.out.println("Enter roll number to get grade");
 			int r=in.nextInt();
-			if(((StudentPojoArray) o1Details).getRollNo()==r)
-				System.out.println(((StudentPojoArray) o1Details).getGrade());
+			if(( o1Details).getRollNo()==r)
+				System.out.println(( o1Details).getGrade());
 			else
-				System.out.println("Enter valid mobile number");
+				System.out.println("Enter valid roll number");
 		}
 		
 	}

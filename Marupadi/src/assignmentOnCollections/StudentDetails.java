@@ -32,14 +32,19 @@ public class StudentDetails {
 		System.out.println("13. Swap two  Student Details ");
 		System.out.println("14. Delete  Student Details ");
 		System.out.println("15. Check Student Details list is empty or not ");
+		System.out.println("16. Join two array lists");
+		System.out.println("17. Trim array list to it's size");
+		System.out.println("18. Display array lists with index value");
+		System.out.println("19. Compare two array lists");
 		
-		System.out.println("16. Quit student details ");
+		
+		System.out.println("20. Quit student details ");
 		
 		
 		byte chooseAChoice=input.nextByte();
 		switch(chooseAChoice)
        {
-       case 1:getStudentDetails(studentList);
+       case 1:object.getStudentDetails(studentList);
 		      break;
 		      
 		      
@@ -68,7 +73,7 @@ break;
        case 7:updateStudentList(studentList);
               break;
               
-       case 8://sortingStudents(studentList);
+       case 8:sortingStudents(studentList);
               break;
               
        case 9: cloningArrayList(studentList);
@@ -91,8 +96,20 @@ break;
                  
        case 15:object.checkIsEmpty(studentList);
                break;
+               
+       case 16:object.joinArrayList(studentList);
+                break;
+                
+       case 17:object.trimArrayList(studentList);
+                break;
           
-       case 16:isTrue=false;
+       case 18:object.displayWithIndex(studentList);
+       break;
+
+       case 19:object.compareArrayLists(studentList);
+       break;
+
+       case 20:isTrue=false;
        break;
        default:System.out.println("Enter the valid choice ");
     	   
@@ -102,7 +119,61 @@ break;
 
 
 
-private void checkIsEmpty(ArrayList<StudentPojoArray> studentList) {
+	private void compareArrayLists(ArrayList<StudentPojoArray> studentList) {
+		// TODO Auto-generated method stub
+		ArrayList<StudentPojoArray> studentList2=new ArrayList<StudentPojoArray>();
+		System.out.println("Enter first array list elements ");
+ 	   
+		this.getStudentDetails(studentList);
+		System.out.println("Enter second array list elements ");
+	 	   
+		this.getStudentDetails(studentList2);
+		boolean compare=studentList.equals(studentList2);
+		if(compare==true)
+			System.out.println("Array list elements are equal ");
+		else
+			System.out.println("Array list elements are not equal ");
+	 	   
+		
+		
+	}
+
+
+
+	private void displayWithIndex(ArrayList<StudentPojoArray> studentList) {
+		// TODO Auto-generated method stub
+		for(int i=0;i<studentList.size();i++)
+System.out.println("Index :" + i +"\nValue : " + studentList.get(i));
+		
+	}
+
+
+
+	private void trimArrayList(ArrayList<StudentPojoArray> studentList) {
+		// TODO Auto-generated method stub
+		studentList.trimToSize();
+		System.out.println("Array list trimed to size");
+		
+		
+	}
+
+
+
+	public void joinArrayList(ArrayList<StudentPojoArray> studentList)
+{
+		// TODO Auto-generated method stub
+	ArrayList<StudentPojoArray> studentList2=new ArrayList<StudentPojoArray>();
+	this.getStudentDetails(studentList);
+	this.getStudentDetails(studentList2);
+	studentList.addAll(studentList2);
+	this.displayStudentDetails(studentList);
+	
+		
+	}
+
+
+
+public void checkIsEmpty(ArrayList<StudentPojoArray> studentList) {
 		// TODO Auto-generated method stub
 	if(studentList.isEmpty())
 	{
@@ -117,7 +188,7 @@ private void checkIsEmpty(ArrayList<StudentPojoArray> studentList) {
 
 
 
-private void deleteAllDetails(ArrayList<StudentPojoArray> studentList) {
+public void deleteAllDetails(ArrayList<StudentPojoArray> studentList) {
 		// TODO Auto-generated method stub
 	studentList.clear();
 	System.out.println("Student Details are deleted ");
@@ -127,7 +198,7 @@ private void deleteAllDetails(ArrayList<StudentPojoArray> studentList) {
 
 
 
-private void swapTwoDetails(ArrayList<StudentPojoArray> studentList) {
+public void swapTwoDetails(ArrayList<StudentPojoArray> studentList) {
 		// TODO Auto-generated method stub
     Scanner input=new Scanner(System.in);
 	System.out.println("Enter the index positios you want to swap");
@@ -144,7 +215,7 @@ private void swapTwoDetails(ArrayList<StudentPojoArray> studentList) {
 
 
 
-private void extractPortion(ArrayList<StudentPojoArray> studentList) {
+public void extractPortion(ArrayList<StudentPojoArray> studentList) {
 		// TODO Auto-generated method stub
 	Scanner input=new Scanner(System.in);
 	System.out.println("Enter the starting and ending index posion of student details you want to extract  ");
@@ -158,7 +229,7 @@ private void extractPortion(ArrayList<StudentPojoArray> studentList) {
 
 
 
-private void displayStudentDetails(ArrayList<StudentPojoArray> studentList) {
+public void displayStudentDetails(ArrayList<StudentPojoArray> studentList) {
 		// TODO Auto-generated method stub
 	System.out.println("The student details are ");
 
@@ -174,7 +245,7 @@ private void displayStudentDetails(ArrayList<StudentPojoArray> studentList) {
 
 
 
-private void reverseStudentDetails(ArrayList<StudentPojoArray> studentList) {
+void reverseStudentDetails(ArrayList<StudentPojoArray> studentList) {
 		// TODO Auto-generated method stub
 	ArrayList<StudentPojoArray> reverseList=new ArrayList<>();
 	for(int i=studentList.size()-1;i>=0;i--)
@@ -230,10 +301,21 @@ private static void cloningArrayList(ArrayList<StudentPojoArray> studentList) {
 
 
 
-//private static void sortingStudents(ArrayList<StudentPojoArray> studentList) {
+private static void sortingStudents(ArrayList<StudentPojoArray> studentList) {
 		// TODO Auto-generated method stub
-//Comparator comp=new rollNoComparator();		
-//}
+//Comparator comp=new rollNoComparator();
+	Collections.sort(studentList,new rollNoComparator());
+	System.out.println("The student details are ");
+
+
+	for(StudentPojoArray i:studentList)
+	{
+	System.out.println("Student Roll number: " + i.getRollNo() + "\nName :" + i.getStudentName() + "\nClass :" + i.getStd() + "\nTamil Mark :" + i.getTamilMark() + "\nEnglish Mark :" + i.getEnglishMark() +"\nMaths Mark :"+i.getMathsMark()+ "\nScience Mark :"+i.getScienceMark()+"\nSocial Mark :"+i.getSocialMark()+"\nTotal Marks :" + i.getTotalMark());
+	}
+
+
+	
+}
 
 
 
@@ -276,7 +358,9 @@ private static void updateStudentList(ArrayList<StudentPojoArray> studentList) {
 		student.setScienceMark(scienceMark);
 		student.setSocialMark(socialMark);
 		student.setTotalMark(totalMark);
+		
 		studentList.set(indexValue, student);
+		
 		System.out.println("Display details after update ");
 
 		for(StudentPojoArray i:studentList)
@@ -308,7 +392,7 @@ private static void searchThroughRollNumber(ArrayList<StudentPojoArray> studentL
 
 
 }
-	private static void getStudentDetails(ArrayList<StudentPojoArray> studentList) {
+	private void getStudentDetails(ArrayList<StudentPojoArray> studentList) {
 		// TODO Auto-generated method stub
 		int rollNo;
 		String studentName;
@@ -428,9 +512,18 @@ System.out.println("Student Roll number: " + i.getRollNo() + "\nName :" + i.getS
 	public static void removeDetails(ArrayList<StudentPojoArray> studentList)
 	{
 		Scanner input=new Scanner(System.in);
-		System.out.println("Enter the index position you want to remove details ");
+		System.out.println("Enter the roll number you want to remove details ");
 		int indexRemove=input.nextInt();
-		studentList.remove(indexRemove);
+		for(StudentPojoArray i:studentList)
+		{
+		if(i.getRollNo()==indexRemove)
+		{
+			int r=studentList.indexOf(i);
+			studentList.remove(r);
+			break;
+		}
+		}
+		System.out.println("Details after remove ");
 		for(StudentPojoArray i:studentList)
 		{
 		System.out.println("Student Roll number: " + i.getRollNo() + "\nName :" + i.getStudentName() + "\nClass :" + i.getStd() + "\nTamil Mark :" + i.getTamilMark() + "\nEnglish Mark :" + i.getEnglishMark() +"\nMaths Mark :"+i.getMathsMark()+ "\nScience Mark :"+i.getScienceMark()+"\nSocial Mark :"+i.getSocialMark()+"\nTotal Marks :" + i.getTotalMark());
