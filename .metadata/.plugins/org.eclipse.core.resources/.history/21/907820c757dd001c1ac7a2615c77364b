@@ -1,7 +1,5 @@
 package assignmentOnCollections;
 
-import java.util.Objects;
-
 public class StudentPojoArray 
 {
 	private int rollNo;
@@ -13,26 +11,6 @@ public class StudentPojoArray
 	private int scienceMark;
 	private int socialMark;
 	private int totalMark;
-	@Override
-	public int hashCode() {
-		return Objects.hash(englishMark, grade, mathsMark, rollNo, scienceMark, socialMark, std, studentName, tamilMark,
-				totalMark);
-	}
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		StudentPojoArray other = (StudentPojoArray) obj;
-		return englishMark == other.englishMark && Objects.equals(grade, other.grade) && mathsMark == other.mathsMark
-				&& rollNo == other.rollNo && scienceMark == other.scienceMark && socialMark == other.socialMark
-				&& std == other.std && Objects.equals(studentName, other.studentName) && tamilMark == other.tamilMark
-				&& totalMark == other.totalMark;
-	}
-
 	private String grade;
 	
 	public int getRollNo() {

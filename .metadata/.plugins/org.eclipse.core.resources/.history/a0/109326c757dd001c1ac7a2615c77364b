@@ -140,7 +140,7 @@ public class StudentDetailsHM {
 			StudentPojoArray o1Details=mapentry.getValue();
 			System.out.println(mapentry.getKey());
 			System.out.println(mapentry.getValue());
-			//o1Details.equals(i)
+			
 			System.out.println("Enter roll number to get grade");
 			int r=in.nextInt();
 			if(( o1Details).getRollNo()==r)
