@@ -1,0 +1,10 @@
+package connectingFolksWeb;
+
+public class CreatePost {
+
+	public void Option(String userName) 
+	{
+		
+	}
+
+}

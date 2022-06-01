@@ -11,6 +11,7 @@ public class HashMapDemo {
 		hm.put(13, "Serma");
 		System.out.println(hm);
 		System.out.println(hm.get(13));
+		if(hm.containsKey(12))
 		
 	}
 

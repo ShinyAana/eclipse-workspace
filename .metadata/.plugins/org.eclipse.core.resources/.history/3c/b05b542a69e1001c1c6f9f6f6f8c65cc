@@ -1,0 +1,15 @@
+package connectingFolksWeb;
+
+public class LogInPage {
+
+	public void create_New_Account() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void login_Account() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

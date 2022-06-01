@@ -5,6 +5,7 @@ interface In1
     final int a = 10;
     void walk();
     void rat();
+    void eat();
     default void display()
     {
         System.out.println("Interface 1 hello");
@@ -61,6 +62,12 @@ static void walkStatic()
 
 	@Override
 	public void rat() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void eat() {
 		// TODO Auto-generated method stub
 		
 	}

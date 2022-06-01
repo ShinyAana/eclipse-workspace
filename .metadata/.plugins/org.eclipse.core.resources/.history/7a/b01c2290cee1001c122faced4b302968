@@ -1,0 +1,32 @@
+package connectingFolksWeb;
+
+import java.util.Scanner;
+
+public class CreatePost {
+
+	public void Option(String userName) 
+	{
+        Scanner input=new Scanner(System.in);
+        System.out.println("..............Choose One Option.............");
+        System.out.println(" 1.Post \n 2.Exit ");
+        int ch=input.nextInt();
+        switch (ch) {
+		case 1: {
+		    	createAPost(userName);
+			break;
+		}
+		case 2:{
+			UserIdHome obj=new UserIdHome();
+ 	       obj.userAccount();
+ 	    	 
+			break;
+		}
+
+	}
+
+}
+
+	private void createAPost(String userName)
+	{
+		
+	}

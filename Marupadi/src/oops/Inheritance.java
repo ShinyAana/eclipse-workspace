@@ -1,5 +1,4 @@
 package oops;
-
 class Animal
 {  
 protected void eat()

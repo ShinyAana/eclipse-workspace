@@ -3,8 +3,10 @@ package vector;
 import java.util.Scanner;
 
 public class StudentDetailsStart {
-	private void flowManager()
+	public static void main(String[] args)
 	{
+	//private void flowManager()
+	//{
 		Scanner input=new Scanner(System.in);
 		boolean isTrue=true;
 		
@@ -101,5 +103,6 @@ break;
 	}
 
 	}
+	
 
 }
