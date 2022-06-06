@@ -10,10 +10,12 @@ public class PostDetails
      String subject;
      String message;
      int postId;
-     LinkedHashMap<String,String> comments=new LinkedHashMap<>();
-     LinkedHashMap<String,String> likes=new LinkedHashMap<>();
- 	
-	PostDetails(String userName,String shareTo,String subject,String message,int postId,LinkedHashMap<String, String> comments,LinkedHashMap<String, String> likes)
+  LinkedHashMap<String,String> comments=new LinkedHashMap<>();
+    LinkedHashMap<String,String> likes=new LinkedHashMap<>();
+    
+
+
+	PostDetails(String userName,String shareTo,String subject,String message,int postId,LinkedHashMap<String,String> comments,LinkedHashMap<String,String> likes)
 	{
 	this.userName=userName;
 	this.shareTo=shareTo;
@@ -22,7 +24,17 @@ public class PostDetails
 	this.postId=postId;
 	this.comments=comments;
 	this.likes=likes;
+
+	
 	}
-
-
+	/*
+	 * PostDetails(LinkedHashMap<String,String>
+	 * comments,LinkedHashMap<String,String> likes) { this.comments=comments;
+	 * this.likes=likes;
+	 * 
+	 * }
+	 */
+	
 }
+
+

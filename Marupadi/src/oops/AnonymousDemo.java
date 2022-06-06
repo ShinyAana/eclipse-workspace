@@ -6,6 +6,10 @@ class A
 		System.out.println("Class A display");
 	}
 }
+interface In2
+{
+	
+}
 public class AnonymousDemo {
 	 
 	public static void main(String[] args)

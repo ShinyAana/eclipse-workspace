@@ -1,0 +1,26 @@
+package oops;
+class Book
+{
+	public void updateDB()
+	{
+		System.out.println("Updating DB");
+	}
+}
+class num
+{
+	public void printNum()
+	{
+		for(int i=0;i<5;i++)
+		{
+		System.out.println(i);
+		}
+	}
+}
+public class MultithreadingDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package oops;
+class Book
+{
+	public void updateDB()
+	{
+		System.out.println("Updating DB");
+	}
+}
+public class MultithreadingDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,33 @@
+package connectingFolksWeb;
+
+//import java.util.HashSet;
+import java.util.LinkedHashMap;
+
+public class PostDetails 
+{
+	 String userName;
+     String shareTo;
+     String subject;
+     String message;
+     int postId;
+   String comments;
+    String likes;
+
+
+
+	PostDetails(String userName,String shareTo,String subject,String message,int postId)
+	{
+	this.userName=userName;
+	this.shareTo=shareTo;
+	this.subject=subject;
+	this.message=message;
+	this.postId=postId;
+	}
+	PostDetails(String comments,String likes)
+	{
+		this.comments=comments;
+		this.likes=likes;
+	}
+}
+
+
