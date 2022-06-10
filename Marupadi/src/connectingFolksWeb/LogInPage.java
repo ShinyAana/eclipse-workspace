@@ -1,9 +1,11 @@
 package connectingFolksWeb;
 
+//import java.io.Serializable;
 import java.util.LinkedHashMap;
 import java.util.Scanner;
 
-public class LogInPage {
+
+public class LogInPage{
 	protected static LinkedHashMap<String, LogInPage> database = new LinkedHashMap<String, LogInPage>();
 	String userName;
 	String password;
@@ -17,10 +19,10 @@ public class LogInPage {
 		this.password = password;
 		this.ownPost = ownPost;
 		this.receivedPost = receivedPost;
-	}
+		}
 
 	LogInPage() {
-
+		
 	}
 
 	public void createNewAccount() {
@@ -43,7 +45,7 @@ public class LogInPage {
 			System.out.println();
 			UserIdHome obj = new UserIdHome();
 			obj.userAccount();
-		} else {
+			} else {
 			System.out.println("**User name already exist.....");
 			createNewAccount();
 		}

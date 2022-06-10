@@ -305,6 +305,7 @@ private static void sortingStudents(ArrayList<StudentPojoArray> studentList) {
 		// TODO Auto-generated method stub
 //Comparator comp=new rollNoComparator();
 	Collections.sort(studentList,new rollNoComparator());
+	Collections.sort(studentList, new rollNoComp());
 	System.out.println("The student details are ");
 
 

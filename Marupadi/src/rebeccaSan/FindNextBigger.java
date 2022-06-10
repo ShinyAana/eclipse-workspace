@@ -31,6 +31,14 @@ public class FindNextBigger {
 				
 			}
 		}
+		/*
+		 * int next = 0; for(int i=0;i<length;i++) { for(int j=i+1;j<length;j++) {
+		 * if(arr[i]<arr[j]) { next=arr[j]; break; }
+		 * 
+		 * } System.out.print(arr[i]+ " -> " + next + "  "); next=-1;
+		 * 
+		 * }
+		 */	
 	}
 
 }

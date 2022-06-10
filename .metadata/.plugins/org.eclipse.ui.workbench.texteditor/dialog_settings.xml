@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="rollNoComparator"/>
+		<item key="selection" value="comment1"/>
 		<list key="findhistory">
+			<item value="comment1"/>
 			<item value="rollNoComparator"/>
 		</list>
 		<list key="replacehistory">
