@@ -1,0 +1,28 @@
+package fileIO;
+
+import java.io.FileInputStream;
+
+public class FileInputStreamDemo {
+
+	public static void main(String[] args) {
+		try 
+		{
+			FileInputStream fisObject = new FileInputStream("D:\\FileTest.txt");
+			
+			int FileText = 0;
+			
+			while ((FileText = fisObject.read()) != -1)
+			{
+				System.out.print((char) FileText);
+			}\
+			fisObject.close();
+		}
+		
+		
+		catch (Exception e) {
+			System.out.println(e);
+		}
+
+	}
+
+}

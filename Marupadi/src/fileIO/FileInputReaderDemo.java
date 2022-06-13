@@ -9,18 +9,14 @@ public class FileInputReaderDemo {
 		// TODO Auto-generated method stub
 		try
 		{
-			FileInputStream obj=new  FileInputStream("D:\\FileTest.txt");
+			FileInputStream obj=new  FileInputStream("D:\\WordFile.doc");
 			int i=0;
 			while((i=obj.read())!=-1)
 			{
 				System.out.print((char)i);
 			}
 			obj.close();
-			HashMap<Integer,FileInputStream> hm=new HashMap<>();
-			hm.put(1, obj);
-			System.out.println(hm);
-			
-		}
+			}
 		catch(Exception e)
 		{
 			System.out.println(e);
