@@ -1,7 +1,7 @@
 package oops;
 class Table
 {
-	synchronized void printTable(int n)
+    synchronized void printTable(int n)
 	{
 		for(int i=1;i<=5;i++)
 		System.out.println(i*n);
@@ -17,7 +17,16 @@ public class SynchronizedMultiThread {
 				{
 			public void run()
 			{
-				t.printTable(13);;
+				try {
+					
+					Thread.sleep(5000);
+					t.printTable(13);
+					
+					System.out.println(Thread.currentThread().getName());
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 				};
 				Thread t2=new Thread()
