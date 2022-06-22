@@ -10,8 +10,8 @@ public class PostDetails
      String subject;
      String message;
      int postId;
-  LinkedHashMap<String,String> comments=new LinkedHashMap<>();
-    LinkedHashMap<String,String> likes=new LinkedHashMap<>();
+     LinkedHashMap<String,String> comments=new LinkedHashMap<>();
+     LinkedHashMap<String,String> likes=new LinkedHashMap<>();
     
 
 
