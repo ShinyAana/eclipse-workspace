@@ -7,10 +7,6 @@ String pass=request.getParameter("password");
 String mNo=request.getParameter("mobilenumber");
 
 String eMail=request.getParameter("email");
-static final void m()
-{
-	
-}
 try
 {
 	Class.forName("com.mysql.jdbc.Driver");

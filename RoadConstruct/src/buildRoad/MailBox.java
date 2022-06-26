@@ -98,6 +98,10 @@ public void sendPetition(int checkId, String checkName)
 	{
 		System.out.println("Message sent successfully");
 	}
+	if(checkId==1)
+	{
+		
+	}
 	else
 	{
 		UserHome homeObject=new UserHome();

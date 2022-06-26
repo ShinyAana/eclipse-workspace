@@ -200,7 +200,7 @@ public LogInPage()
 			{
 			
 			case 1:
-				mailObj.sendPetition(checkId,checkName);
+				    mailObj.sendPetition(checkId,checkName);
 			        break;
 			        
 			case 2: mailObj.viewSentMessage(checkId,checkName);
