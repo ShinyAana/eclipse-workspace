@@ -14,7 +14,7 @@ public class UserHome {
 		System.out.println("New user? Press 1 to Sign Up");
 		System.out.println("Press 2 to login");
 		System.out.println();
-		System.out.println(" 1.Create Account \n 2. Login Account \n 3.Go To HomePage");
+		System.out.println(" 1.Create Account \n 2.Login Account \n 3.Go To HomePage");
 		System.out.print("=> ");
 		int page_retry_count = 0;
 		try {
@@ -22,7 +22,7 @@ public class UserHome {
 			switch (ch) {
 			case 1: {
 				page_retry_count = 0;
-				new LogInPage().createUser();
+				new LogInPage().accountCreation();
 				break;
 			}
 			case 2: {

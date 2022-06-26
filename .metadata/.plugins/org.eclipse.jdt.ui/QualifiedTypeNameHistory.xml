@@ -44,6 +44,15 @@
     <fullyQualifiedTypeName name="java.lang.StringBuilder"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.protocol.Resultset"/>
+    <fullyQualifiedTypeName name="com.mysql.cj.xdevapi.Statement"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="java.util.Queue"/>
+    <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
 </qualifiedTypeNameHistroy>

@@ -18,16 +18,16 @@ public class StartProcess {
 		boolean isTrue=true;
 		while(isTrue)
 		{
-		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*");
+		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_*_+_*_+_*_+_*_+_*_+_*_+_*");
 		System.out.println("          Welcome To Road Construction Road Construction Public Grievance Page");
-		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+*_+");
+		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+*_+_*_+_*_+_*_+_*_+_*_+_*_+_*");
 		
 		System.out.println();
 		System.out.println();
 		
 		System.out.println("Connecting through");
 		System.out.println("1. Admin(Government)");
-		System.out.println("2. Manager");
+		System.out.println("2. Minister");
 		System.out.println("3. Public");
 		System.out.println("4. Exit");
 		

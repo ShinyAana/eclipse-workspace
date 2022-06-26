@@ -23,17 +23,20 @@ public class RemoveDup {
 	public static void main(String[] args)
 	{
 		int[] arr= {2,2,3,4,5,5,7};
-		//Arrays.sort(arr);     
+		Arrays.sort(arr);     
 	      
         int[] result = new int[arr.length];
         int previous = arr[0];
         result[0] = previous;
+        int count=0;
 
         for (int i = 1; i < arr.length; i++) {
             int ch = arr[i];
 
-            if (previous != ch) {
+            if (previous != ch) 
+            {
                 result[i] = ch;
+                count++;
             }
             
             previous = ch;
