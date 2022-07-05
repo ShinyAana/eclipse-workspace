@@ -5,7 +5,7 @@ public class MergeSort {
     {
         int n1 = m - l + 1;
         int n2 = r - m;
-   int L[] = new int[n1];
+        int L[] = new int[n1];
         int R[] = new int[n2];
  
         for (int i = 0; i < n1; ++i)
@@ -42,9 +42,11 @@ public class MergeSort {
   
     void sort(int arr[], int l, int r)
     {
-        if (l < r) {
+        if (l < r) 
+        {
             int m =l+ (r-l)/2;
-  sort(arr, l, m);
+            
+            sort(arr, l, m);
             sort(arr, m + 1, r);
   
              merge(arr, l, m, r);

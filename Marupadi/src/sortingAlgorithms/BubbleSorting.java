@@ -31,6 +31,7 @@ public class BubbleSorting {
 	    	 }
 	    	 j++;
 	     }
+	      //System.out.println("Second largest "+ arr[n-2]);
 	      System.out.println("Array after sorting :");
 		     for(int value:arr)
 		    	 System.out.print(" " + value);

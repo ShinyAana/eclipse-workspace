@@ -179,7 +179,7 @@ public LogInPage()
 		
 		System.out.println();
 		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_*_+_*_+_*_+_*_+_*_+_*_+_*");
-		System.out.println("          Welcome To Road Construction Road Construction Public Grievance Page \n       You are Logged in as Public");
+		System.out.println("          Welcome To Road Construction Road Construction Public Grievance Page \n                 You are Logged in as Public");
 		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+*_+_*_+_*_+_*_+_*_+_*_+_*_+_*");
 		
 		System.out.println();
@@ -229,17 +229,18 @@ public LogInPage()
 		
 		System.out.println();
 		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_*_+_*_+_*_+_*_+_*_+_*_+_*");
-		System.out.println("          Welcome To Road Construction Road Construction Public Grievance Page \n       You are Logged in as TN Government PWD Minister");
+		System.out.println("          Welcome To Road Construction Road Construction Public Grievance Page \n                 You are Logged in as TN Government PWD Minister");
 		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+*_+_*_+_*_+_*_+_*_+_*_+_*_+_*");
 		
 		System.out.println();
 		System.out.println();
 		
 		System.out.println("Enter your action");
-		System.out.println("1. Send Messages");
-		System.out.println("2. View Sent Messages");
-		System.out.println("3. View Received Messages");
-		System.out.println("4. Exit");
+		System.out.println("1. Estimate road construction Cost");
+		System.out.println("2. Send Messages");
+		System.out.println("3. View Sent Messages");
+		System.out.println("4. View Received Messages");
+		System.out.println("5. Exit");
 		System.out.println();
 		
 		String choice=input.next();
@@ -249,16 +250,20 @@ public LogInPage()
 			switch(ch)
 			{
 			
-			case 1:mailObj.sendPetition(checkId,checkName);
+			case 1:mailObj.estimateRoadConstructionCost(checkId,checkName);
 		        break;
+		        
+			case 2:mailObj.sendPetition(checkId,checkName);
+	        break;
+		
 			
-			case 2: mailObj.viewSentMessage(checkId,checkName);
+			case 3: mailObj.viewSentMessage(checkId,checkName);
 			        break;
 			
-			case 3:mailObj.viewReceivedMessage(checkId,checkName);
+			case 4:mailObj.viewReceivedMessage(checkId,checkName);
 	             break;
 			
-			case 4:StartProcess mainObj = new StartProcess();
+			case 5:StartProcess mainObj = new StartProcess();
 			       mainObj.startMenu();
 
 			         
@@ -277,7 +282,7 @@ public LogInPage()
 		
 		System.out.println();
 		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_*_+_*_+_*_+_*_+_*_+_*_+_*");
-		System.out.println("          Welcome To Road Construction Road Construction Public Grievance Page \n       You are Logged in as TN Government(Admin)");
+		System.out.println("          Welcome To Road Construction Road Construction Public Grievance Page \n                 You are Logged in as TN Government(Admin)");
 		System.out.println("+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+_*_+*_+_*_+_*_+_*_+_*_+_*_+_*_+_*");
 		
 		System.out.println();
@@ -289,7 +294,8 @@ public LogInPage()
 		System.out.println("3. Assign Road id to newly approved road");
 		System.out.println("4. Send Message to minister");
 		System.out.println("5. View Received Petition");
-		System.out.println("6. Exit");
+		System.out.println("6. View approved Road Details");
+		System.out.println("7. Exit");
 		System.out.println();
 		
 		String choice=input.next();
@@ -298,7 +304,7 @@ public LogInPage()
 			byte ch=Byte.parseByte(choice);
 			switch(ch)
 			{
-			case 1:mailObj.sendPetition(checkId,checkName);
+			case 1:mailObj.sendMessageToMinister(checkId,checkName);
 			       break;
 		    
 			case 2: 
@@ -315,7 +321,10 @@ public LogInPage()
 			case 5: mailObj.viewReceivedMessage(checkId,checkName);
 			        break;
 			
-			case 6:StartProcess mainObj = new StartProcess();
+			case 6:mailObj.viewRoadDetails(checkId,checkName);
+			break;
+			        
+			case 7:StartProcess mainObj = new StartProcess();
 			       mainObj.startMenu();
 
 			         

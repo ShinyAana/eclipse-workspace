@@ -30,9 +30,9 @@ ResultSet resultSet = null;
 <%
 try {
 	Statement statement;
-	//ResultSet resultSet = null;
+	ResultSet resultSet = null;
 
-	//Class.forName("com.mysql.jdbc.Driver");
+	Class.forName("com.mysql.jdbc.Driver");
 	Connection con=DriverManager.getConnection(  
 			"jdbc:mysql://localhost:3306/loginform?characterEncoding=latin1","root","PriyaAna");  
 	
@@ -40,8 +40,7 @@ try {
 //connectionUrl + dbName, userId, password);
 statement = con.createStatement();
 String sql = "SELECT * FROM logindetails";
-
-ResultSet resultSet = statement.executeQuery(sql);
+resultSet = statement.executeQuery(sql);
 while (resultSet.next()) {
 %>
 <tr bgcolor="#8FBC8F">

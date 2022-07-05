@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="" method="post">
+	<label for="fname">First Name: </label>
+	<input type="text" id="fname" name="fname"  placeholder="Aanya"/><br><br>
+	<label for="lname">Last Name: </label>
+	<input type="text" id="lname" name="lname"  placeholder="Nilavoli"/><br><br>
+	<label>Date Of Birth :</label>
+	<input type="Date" name="dob" id="dob" placeholder="MM/DD/YYYY" /><br><br>	
+	<label for="email">Enter your email:</label>
+  <input type="email" id="email" name="email"><br><br>
+  
+	<label for="pass">Password  :</label>
+
+	<input type="Password" name="pass" id="pass"/><br><br>
+	<label>Educational Qualification:</label>
+	<select id="Qualification" name="Qualification" size="2">
+		<option>B.E</option>
+		<option>B.Sc</option>
+		<option>B.A</option>
+		<option>B.L</option>
+		<option selected>B.Lit</option>
+		<option>B.Com</option>
+	</select>
+	<h3>Select Gender</h3>
+	<label>Male     :</label><input type="radio" name="gender" id="male" />
+	<label>Female   :</label><input type="radio" name="gender" id="female" />
+	<label>Others   :</label><input type="radio" name="gender" id="others" />
+	<h3>Select Job Roles</h3>
+	<label>Developer     :</label><input type="checkbox" id="dev" />
+	<label>QA :</label><input type="checkbox" id="qa" />
+	<label>Support   :</label><input type="checkbox" id="support" /><br><br>
+<label><h3>Upload Your Certificates</h3></label>
+<input type="file" name="certi" id="certi"/>
+<h3>Tell about you</h3>
+<textarea name="about" cols="30" rows="15"></textarea><br>
+<input type="checkbox" name="sub" id="sub"/><label>Submitted information are true to my knoeledge</label><br><br>
+<button type="button" onclick="alert('Check your details')">Verify</button>
+<input type="submit" name="submit" id="submit"/>
+
+
+
+</form>
+
+</body>
+</html>

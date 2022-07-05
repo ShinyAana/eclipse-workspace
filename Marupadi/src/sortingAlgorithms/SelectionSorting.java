@@ -26,6 +26,7 @@ public class SelectionSorting {
 	               arr[j]=temp;
 	               }
 	           }
+	         System.out.println(arr[0] + " is the smallest");
 	         }
 	     System.out.println("Array after sorting :");
 	     for(int value:arr)

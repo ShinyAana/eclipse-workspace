@@ -15,9 +15,9 @@ public class PriorityQueueDemo {
         testStringsPQ.add("abxy");
 
         System.out.println("Strings Stored in Natural Ordering in a Priority Queue\n");
-        while (!testStringsPQ.isEmpty()) {
-            System.out.println(testStringsPQ.poll());
-        }
+       // while (!testStringsPQ.isEmpty()) {
+            System.out.println(testStringsPQ);
+        //}
 
 	}
 
