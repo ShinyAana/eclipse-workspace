@@ -10,6 +10,7 @@ public class Check {
 		
 		ArrayList<Integer> operands=new ArrayList<>(Arrays.asList(4,1,5,3));
 		System.out.println(operands);
+		ArrayList
 		String checkExp="4+3-5-1";
 		for(int i=0;i<checkExp.length();i+=2)
 		{

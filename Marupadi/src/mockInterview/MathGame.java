@@ -1,4 +1,5 @@
 package mockInterview;
+import java.util.Random; 
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -28,8 +29,14 @@ public class MathGame {
 				System.out.println("Game starts");
 				System.out.println();
 				System.out.println("Operants:");
-				// ArrayList<Integer> operands=new ArrayList<>(Arrays.asList(4,1,5,3));
-				System.out.println("Operants[4,1,5,3] \nOperators[(,+,-,*,/,)] \nTargetValue[1]");
+				Random rand = new Random();
+				int n1 = rand.nextInt(10);
+				int n2 = rand.nextInt(10);
+				int n3 = rand.nextInt(10);
+				int n4 = rand.nextInt(10);
+              ArrayList<Integer> operands=new ArrayList<>(Arrays.asList(n1,n2,n3,n4));
+              System.out.println(operands);
+				System.out.println("Operators[(,+,-,*,/,)] \nTargetValue[1]");
 				System.out.println();
 				System.out.println("Built the math expression");
 				String arithmeticExpression = input.next();
