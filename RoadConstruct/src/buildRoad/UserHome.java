@@ -8,7 +8,7 @@ public class UserHome {
 	public void userAccount() {
 		// TODO Auto-generated method stub
 		System.out.println();
-		System.out.println("........Connecting Folks.........");
+		System.out.println("........Road Construction Public Grievance Page.........");
 		System.out.println();
 		Scanner input = new Scanner(System.in);
 		System.out.println("New user? Press 1 to Sign Up");
