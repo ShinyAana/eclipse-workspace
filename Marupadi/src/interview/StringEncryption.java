@@ -19,8 +19,8 @@ String result="";
   {
 	  int str1Ascii=(int)str1.charAt(i); 
 	  int str2Ascii=(int)str2.charAt(j); 
-	  int val1=str1Ascii-97 + 1; 
-	  int val2=str2Ascii-97 + 1;
+	  int val1=str1Ascii-'a' + 1; 
+	  int val2=str2Ascii-'a'+ 1;
 	  result+="" + alpha[(val1+val2-1)%26];
 	  //System.out.print(val1 + " " + val2);
   i++;

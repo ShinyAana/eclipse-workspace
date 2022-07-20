@@ -13,7 +13,7 @@ public class FibonacciSeries {
 		a = 1;
 		b = 1;
 
-		for (int i = 3; i <= 10; ++i) {
+		for (int i = 3; i <= 50; ++i) {
 			c = a + b;
 			count = 0;
 			for (int j = c; j >= 1; j--) {
@@ -22,7 +22,7 @@ public class FibonacciSeries {
 				}
 			}
 			if (count == 2) {
-				System.out.print(c + " ");
+				System.out.println(c + " ");
 
 			}
 			a = b;

@@ -52,13 +52,17 @@ public class MultithreadingDemo {
 		Thread tobj=new Thread(b);
 		//tobj.setName("book");
 		//System.out.println(tobj.getName());
+		if(!tobj.isAlive())
+		{
+			System.out.println("book thread is not alive");
+		}
 		
 		
 		n.start();
-		n.join();
+		//n.join();
 		tobj.start();
-		tobj.join();
-		//tobj.setPriority(Thread.MAX_PRIORITY);
+		//tobj.join();
+		tobj.setPriority(Thread.MAX_PRIORITY);
 		if(tobj.isAlive())
 		{
 			System.out.println("book thread is alive");
@@ -67,10 +71,6 @@ public class MultithreadingDemo {
 		
 		//tobj.join();
 		//n.join();
-		if(!tobj.isAlive())
-		{
-			System.out.println("book thread is not alive");
-		}
 		
 		System.out.println("Main Thread");
 

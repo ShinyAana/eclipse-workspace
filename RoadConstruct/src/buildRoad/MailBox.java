@@ -8,7 +8,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-public class MailBox extends LogInPage
+public class MailBox extends LogInPage implements Message
 {
 	//LocalDate date = LocalDate.now();
 
@@ -237,8 +237,17 @@ public void viewSentMessage(int checkId, String checkName)
 			System.out.println("<Date Of Msg   :>    "+rs.getDate(5));
 			System.out.println("<Road Location :>    "+rs.getString(6));
 			System.out.println("<Message Body  :>    "+rs.getString(7));
+			if(rs.getString(8)==null)
+			{
+				System.out.println("<Message Status:>    Pending");
+				System.out.println("<Road Id       :>    Pending");
+				
+			}
+			else
+			{
 			System.out.println("<Message Status:>    "+rs.getString(8));
 			System.out.println("<Road Id       :>    "+rs.getString(9));
+			}
 			
 		}
 		rs.close();
@@ -350,7 +359,13 @@ CostDetails costObj=new CostDetails(roadId,regNo,totalEquipmentCost,totalRockSpr
 boolean result=costObj.addTodatabase();
 if(!result)
 {
-	System.out.println("Inserted into DB successfully");
+	System.out.println("Cost Details:");
+	System.out.println("Total Equipment Cost " + totalEquipmentCost);
+	System.out.println("Total Rock Spread Cost " + totalRockSpreadCost);
+	System.out.println("Total Drainage Cost " + totalDrainageCost);
+	System.out.println("Total Man power Cost " + totalManPowerCost);
+	
+	System.out.println("Total Cost to Construct the road " + totalCost);
 }
 else
 {

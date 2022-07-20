@@ -1,5 +1,6 @@
 package mockInterview;
-import java.util.Random; 
+
+import java.util.Random;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -34,8 +35,8 @@ public class MathGame {
 				int n2 = rand.nextInt(10);
 				int n3 = rand.nextInt(10);
 				int n4 = rand.nextInt(10);
-              ArrayList<Integer> operands=new ArrayList<>(Arrays.asList(n1,n2,n3,n4));
-              System.out.println(operands);
+				ArrayList<Integer> operands = new ArrayList<>(Arrays.asList(n1, n2, n3, n4));
+				System.out.println(operands);
 				System.out.println("Operators[(,+,-,*,/,)] \nTargetValue[1]");
 				System.out.println();
 				System.out.println("Built the math expression");

@@ -8,7 +8,7 @@ public class NumberWeightage {
 		int[] val = new int[] {49,36,8,10,12};
 		int len = val.length;
 		int[] weight = new int[len];
-		Arrays.sort(val);//8,10,12,36,49
+		//Arrays.sort(val);//8,10,12,36,49
 		for(int i=0;i<len;i++)
 		{
 			weight[i] = 0;
