@@ -17,6 +17,7 @@ private Singleton()
 	}
 public static void displayMessage()
 {
+	
 	System.out.println("I have called using Singleton object ");
 }
 
