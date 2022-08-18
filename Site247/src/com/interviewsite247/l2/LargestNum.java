@@ -27,6 +27,3 @@ public class LargestNum {
     }
 }
 
-public class LargestNum {
-
-}

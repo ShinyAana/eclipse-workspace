@@ -1,7 +1,7 @@
 package learn;
 import java.util.Scanner ;    
 public class SubarraySum {
-    /* If our function subarray seems to be successful in finding any subarray whose sum of elements matches with the given sum value, then we will print the resulting Subarray, else we will return -1./  
+    
     static int subarray(int arr[] , int n , int sum )  
     {  
         int currentsum, i , j ;  
@@ -33,7 +33,7 @@ public class SubarraySum {
  Scanner sc = new Scanner ( System.in ) ;   
  System.out.println ( " Enter number of elements :  " ) ;  
  n = sc.nextInt() ;  
- int [] array = new int[ 100 ] ;  
+ int [] array = new int[ n ] ;  
  System.out.println ( " Enter elements of the array :  " ) ;  
  for ( int i = 0 ; i < n ; i++ )  
  {  

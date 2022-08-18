@@ -1,5 +1,5 @@
 package learn;
-public class GFG {
+public class StringPermute {
 	 
     // Function to print all the permutations of str
     static void printPermutn(String str, String ans)
@@ -32,10 +32,4 @@ public class GFG {
         String s = "abb";
         printPermutn(s, "");
     }
-}
-Output: 
-abb abb bab bba bab bba
-
-public class StringPermute {
-
 }
