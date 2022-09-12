@@ -1,0 +1,10 @@
+CREATE DATABASE Customers;
+USE Customers;
+
+CREATE TABLE Leads(user_id INT PRIMARY KEY, user_name VARCHAR(50), is_user_a_lead INT);
+CREATE TABLE Contacts(user_id INT PRIMARY KEY, user_name VARCHAR(50), user_email_id VARCHAR(30), user_phone_number VARCHAR(10), is_user_a_customer INT, is_user_in_contact_book INT);
+CREATE TABLE Deals(user_id INT, FOREIGN KEY (user_id) REFERENCES Contacts(user_id), user_estimated_sales_amount DOUBLE, user_estimated_sales_id INT PRIMARY KEY AUTO_INCREMENT NOT NULL);
+
+SELECT * FROM Leads;
+SELECT * FROM Contacts;
+SELECT * FROM Deals;

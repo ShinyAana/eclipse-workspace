@@ -1,13 +1,10 @@
 package learn;
 
-public class Eliminate3rd {
-
-}
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class EliminatePeople {
+public class Eliminate3rd {
 
 	public static void main(String[] args) {
 		Scanner input=new Scanner(System.in);

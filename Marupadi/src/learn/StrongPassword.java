@@ -21,6 +21,12 @@ public class StrongPassword {
 	            sc=1;
 	        }
 	    }
+	    if(lc>=1 && uc>=1 && sc>=1 && digit>=1)
+	    {
+	    	return true;
+	    }
+	   // count=lc+uc+sc+digit;
+	    //if()
 	    int req=4-(lc+uc+sc+digit);
 	    if(n+req<6){
 	        return 6-n;

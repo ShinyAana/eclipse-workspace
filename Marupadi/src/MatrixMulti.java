@@ -46,7 +46,7 @@ public class MatrixMulti {
 						productArr[i][j] += firstMatrix[i][k] * secondMatrix[k][j];
 					}
 				}
-			}
+			}//c1==r2...r1c2c1 
 			System.out.println("Multiplication of 2 array is: ");
 			for(int[] row : productArr)
 			{

@@ -7,7 +7,7 @@ public class IpAddressValidate {
 
  public static void main(String[] args) {
   // 127.0.0.1
-  System.out.println(IpAddressValidate.isValidIpManually("127.0.0.11111"));
+  System.out.println(IpAddressValidate.isValidIpManually("127.0.0.11"));
  }
 
 private static boolean isValidIpManually(String ipAddress) 
@@ -21,7 +21,6 @@ private static boolean isValidIpManually(String ipAddress)
 		  if (strArray.length != 4) {
 		   return false;
 		  }
-		  
 		  for (String str : strArray) {
 		   try {
 		    Integer num = Integer.valueOf(str);

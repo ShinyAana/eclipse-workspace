@@ -12,6 +12,7 @@ public class FlightBooking {
 		loadFlight();
 		getUserMenus();
 
+
 	}
 
 	private static void getUserMenus() {
@@ -176,7 +177,6 @@ public class FlightBooking {
 			totalCost += mealFare * noOfSeats + seniorFare;
 			System.out.println("Total Cost is:" + totalCost);
 			flight.setTotalFare(flight.getTotalFare() + totalCost);
-			;
 			booking.setTotalTicketCost(totalCost);
 			System.out.println("Ticket Booked Successfully");
 			System.out.println("Booking id:" + bRepo.add(booking));

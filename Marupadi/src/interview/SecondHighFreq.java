@@ -34,6 +34,8 @@ public class SecondHighFreq
   public static void main(String[] args) {
       String[] A = {"aaa", "bb", "bb", "aaa", "aaa", "c"};
     System.out.println("String with second highest frequency is: "+stringWithSecondHighestFrequency(A));
+    Arrays.sort(A);
+    System.out.println(Arrays.toString(A));
   }
 }
 
